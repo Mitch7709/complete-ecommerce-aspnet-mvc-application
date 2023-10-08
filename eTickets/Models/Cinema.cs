@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
@@ -6,8 +7,14 @@ namespace eTickets.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [DisplayName("Cinema Logo")]
         public string Logo { get; set; }
+
+        [DisplayName("Cinema Name")]
         public string Name { get; set; }
+
+        [DisplayName("Cinema Description")]
         public string Description { get; set; }
 
         //Relationships
